@@ -58,7 +58,7 @@ nav {
 }
 
 .nav-item:hover {
-    background: rgba(0, 0, 0, 0.452);
+    background: rgba(0, 0, 0, 0.884);
     transition: .5s ease-in-out;
 }
 
@@ -71,10 +71,15 @@ nav {
     color: #00ffff;
 }
 
+
 #hamburger-menu {
-    display: none;
-    height: 100%;
     width: 8%;
+    display: none;
+}
+
+#line-container {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,10 +106,26 @@ nav {
 }
 
 #headline {
-    opacity: 0.5;
+    opacity: .5;
+}
+
+#banner {
+    animation: slide-up 1s ease-in-out;
+}
+
+@keyframes slide-up {
+    0% {
+        position: relative;
+        transform: translateY(100%);
+        opacity: 0;
+    } 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 #down-arrow {
+    width: 10vw;
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -353,7 +374,7 @@ input:not(#name-input > input) {
     }
 
     #hamburger-menu {
-        display: flex;
+        display: block;
     }
 }
 
@@ -392,6 +413,10 @@ input:not(#name-input > input) {
     }
 
     .photo:not(.photo:first-child) {
+        margin-top: 40px;
+    }
+
+    #mini-photo {
         margin-top: 40px;
     }
 
