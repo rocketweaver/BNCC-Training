@@ -336,16 +336,19 @@ input:not(#name-input > input) {
 
 #social-media-list {
     margin-top: 20px;
-    display: flex;
 }
 
-.social-media-icon {
+.social-media-link {
+    display: inline-block;
     width: 40px;
+}
+
+.social-media-link {
     margin-right: 20px;
 }
 
-.social-media-icon:last-child {
-    margin-right: 0;
+.social-media-icon {
+    width: 100%;
 }
 
 @media screen and (max-width: 1024px) {

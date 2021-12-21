@@ -36,3 +36,38 @@ hamburgerMenu.addEventListener("click", function() {
         navList.style.transform = "translateY(-120%)";
     }
 });
+
+//get user input
+const firstName = document.getElementById("first-name"); 
+const lastName = document.getElementById("last-name"); 
+const email = document.getElementById("email");
+const phoneNumber = document.getElementById("phone-number");
+const gender = document.getElementsByClassName("gender");
+const msg = document.getElementById("message");
+const submit = document.getElementById("submit");
+
+let userInput = {};
+
+let genderValue = () => {
+    for (var i = 0, length = gender.length; i < length; i++) {
+        if (gender[i].checked) {
+          // do whatever you want with the checked radio
+          return gender[i].value;
+      
+          // only one radio can be logically checked, don't check the rest
+          break;
+        }
+      }
+}
+
+submit.addEventListener("click", () => {
+    userInput = {
+        name : firstName.value + " " + lastName.value,
+        email : email.value,
+        phone_number : phoneNumber.value,
+        gender : genderValue(),
+        msg_txt: msg.value
+    }
+
+    console.log(userInput);
+});

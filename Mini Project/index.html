@@ -65,26 +65,26 @@
     <section id="contact-us">
         <h2 class="section-title">Contact Us</h2>
         <div id="contact-form">
-            <form action="" method="get">
+            <!-- <form> -->
                 <div id="name-input">
-                    <input type="text" name="first name" id="first-name" placeholder="First Name">
-                    <input type="text" name="last name" id="last-name" placeholder="Last Name">
+                    <input type="text" name="first name" id="first-name" placeholder="First Name" required autocomplete="off">
+                    <input type="text" name="last name" id="last-name" placeholder="Last Name" required autocomplete="off">
                 </div>
-                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="email" name="email" id="email" placeholder="Email" required autocomplete="off">
                 <div id="number-and-gender">
-                    <input type="text" name="Phone Number" id="phone-number" placeholder="Phone Number">
+                    <input type="text" name="Phone Number" id="phone-number" placeholder="Phone Number" required autocomplete="off">
                     <div id="gender-input">
                         <div class="radio-input">
-                            <input type="radio" name="gender" id="male"><label for="gender"> Male</label>
+                            <input type="radio" name="gender" class="gender" id="male" value="male" required><label for="gender"> Male</label>
                         </div>
                         <div class="radio-input">
-                            <input type="radio" name="gender" id="female"><label for="gender"> Female</label>
+                            <input type="radio" name="gender" class="gender" id="female" value="female"><label for="gender"> Female</label>
                         </div>
                     </div>
                 </div>
-                <textarea name="message" id="message" placeholder="Message"></textarea>
+                <textarea name="message" id="message" placeholder="Message" required autocomplete="off"></textarea>
                 <input type="submit" value="Submit" id="submit">
-            </form>
+            <!-- </form> -->
         </div>
     </section>
 
@@ -97,18 +97,18 @@
             <div id="social-media">
                 <p>Reach us at:</p>
                 <div id="social-media-list">
-                    <div class="social-media-link">
+                    <a href="#" class="social-media-link">
                         <img src="img/social_media/gmail.svg" alt="Gmail" class="social-media-icon">
-                    </div>
-                    <div class="social-media-link">
+                    </a>
+                    <a href="#" class="social-media-link">
                         <img src="img/social_media/linkedin.svg" alt="Linkedin" class="social-media-icon">
-                    </div>
-                    <div class="social-media-link">
+                    </a>
+                    <a href="#" class="social-media-link">
                         <img src="img/social_media/wa.svg" alt="Whatsapp" class="social-media-icon">
-                    </div>
-                    <div class="social-media-link">
+                    </a>
+                    <a href="#" class="social-media-link">
                         <img src="img/social_media/instagram.svg" alt="Instagram" class="social-media-icon">
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
