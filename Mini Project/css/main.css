@@ -25,7 +25,7 @@ html {
 }
 
 nav {
-    background: rgba(0, 0, 0, 0.205);
+    background: rgba(0, 0, 0, 0.527);
     width: 100%;
     padding: 0 4em;
     position: fixed;
@@ -253,21 +253,25 @@ label {
     color: #4d4d4d;
 }
 
-input:not(input[type="radio"]):focus, textarea:focus {
-    outline: 1px solid#212121;
+input:focus, textarea:focus {
+    outline: 0;
 }
 
-input:not(#name-input > input) {
+input:not(#name) {
     margin-top: 20px;
 }
 
-#name-input {
+.input-group {
+    width: 100%;
+}
+
+#name {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-#name-input > input {
+#name > input {
     width: 49%;
 }
 
@@ -292,9 +296,6 @@ input:not(#name-input > input) {
     align-items: flex-end;
 }
 
-
-
-
 #female {
     margin-left: 20px !important;
 }
@@ -312,6 +313,21 @@ input:not(#name-input > input) {
     border-radius: 24px;
 }
 
+.error-border {
+    border: 1px solid #b71c1c;
+}
+
+.error {
+    color: #b71c1c;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.success-border {
+    border: 1px solid #2e7d32;
+}
+
 #footer {
     background: #212121;
     padding-top: 3em;
@@ -327,6 +343,7 @@ input:not(#name-input > input) {
 #managed-desc img {
     margin-top: 20px;
     width: 250px;
+    display: block !important;
 }
 
 #copyright {
@@ -366,7 +383,7 @@ input:not(#name-input > input) {
         right: 0;
         flex-direction: column;
         width: 100%;
-        background: rgba(0, 0, 0, 0.658);
+        background: rgba(0, 0, 0, 0.527);
         transform: translateY(-120%);
         transition: transform .5s ease-in-out;
         z-index: -1;
@@ -378,6 +395,10 @@ input:not(#name-input > input) {
 
     #hamburger-menu {
         display: block;
+    }
+
+    .error {
+        font-size: 12px;
     }
 }
 
@@ -436,10 +457,15 @@ input:not(#name-input > input) {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
     nav {
         padding: 0 1em;
     }
+
+    #hamburger-menu {
+        width: 15%;
+    }
+
     .container {
         padding: 0 1em;
     }
@@ -474,5 +500,9 @@ input:not(#name-input > input) {
 
     #footer-desc p, #copyright {
         font-size: 14px;
+    }
+    
+    .error {
+        font-size: 10px;
     }
 }
